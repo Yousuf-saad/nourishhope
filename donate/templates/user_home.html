@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NourishHope | Home</title>
+  <link rel="stylesheet" href="{% static 'hope/style.css' %}">
+</head>
+
+<body>
+  <header>
+    <h1>NourishHope</h1>
+    <nav>
+      <a href="{% url 'users_home' %}">Home</a>
+      <a href="donate.html">About Us</a>
+    <a href="{% url 'donations' %}">My donations</a>
+      <a href="{% url 'add_donation' %}">Donate Food</a>
+      <a href="{% url 'profile_edit' %}">Profile</a>
+      <a href="{% url 'logout' %}">logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Fight Hunger. Share Your Surplus.</h2>
+    <a href="{% url 'add_donation' %}" class="btn">Donate Food</a>
+    <a href="{% url 'donations' %}" class="btn secondary">My donations</a>
+  </section>
+
+  <section class="stats">
+    <div>🍲 <strong>10,000+</strong> Meals Donated</div>
+    <div>🚚 <strong>500+</strong> Volunteers</div>
+    <div>👨‍👩‍👧‍👦 <strong>200+</strong> Families Fed Weekly</div>
+  </section>
+
+  <footer>
+
+    <p>python developers</p>
+    <p>Varkala,Tvm</p>
+    <p><strong>Phone:</strong><span>+91 9876543210</span><br></p>
+    <strong>E-mail:</strong><span>nourishhope@gmail.com</span>
+    <p>&copy; 2025 NourishHope.All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>

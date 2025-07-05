@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate Food | NourishHope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Donate Food</h1></header>
+
+  <form id="donationForm">
+    <label>Food Type:
+      <select name="foodType" required>
+        <option>Non-perishable</option>
+        <option>Fresh</option>
+        <option>Prepared</option>
+      </select>
+    </label>
+    <label>Quantity:
+      <input type="number" name="quantity" required>
+    </label>
+    <label>Pickup Location:
+      <input type="text" name="location" required>
+    </label>
+    <label>Pickup Date:
+      <input type="date" name="date" required>
+    </label>
+    <button type="submit">Confirm Donation</button>
+  </form>
+
+  <footer><p>&copy; 2025 NourishHope</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

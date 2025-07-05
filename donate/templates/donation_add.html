@@ -1,0 +1,55 @@
+{% extends 'user_header.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-container{
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+        h2{
+            text-align: center;
+        }
+        form input,form button{
+            width: 100;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        form button{
+            background-color: #5cb85c;
+            color:white;
+            border: none;
+        }
+        form button hover{
+            background-color: #4cae4c;
+        }
+    </style>
+    <div class="form-container">
+    <h2>ADD DONATIONS</h2>
+    <form method="POST">
+    add food name
+    {% csrf_token %}
+    {{donation.as_p}}
+    <button type="submit">SUBMIT</button>
+    </form>
+    </div>
+</body>
+</html>
+{% endblock %}

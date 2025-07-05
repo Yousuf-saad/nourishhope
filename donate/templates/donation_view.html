@@ -1,0 +1,55 @@
+{% extends 'user_header.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations view</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        ul{
+            text-decoration: none;
+        }
+        table{
+            border-collapse: collapse;
+            width: 75%;
+            margin: 20px auto;
+        }
+
+        th,td{
+            text-align: center;
+            padding: 20px;
+        }
+
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        tr:hover{
+            background-color: #d1f0f0;
+        }
+    </style>
+    <h2>Your Donations</h2>
+    <table>
+        <tr>
+            <th>Food Name</th>
+            <th>Quantity</th>
+            <th>Donation Status</th>
+        </tr>
+        {% for all_products in all_product %}
+        <tr>
+            <td>{{all_products.name}}</td>
+            <td>{{all_products.quantity}}</td>
+            <td>{{all_products.donation_status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+{% endblock %}

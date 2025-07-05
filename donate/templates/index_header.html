@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NourishHope | Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootsrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'hope/style.css' %}">
+
+</head>
+
+<body>
+  <header>
+    <h1>NourishHope</h1>
+    <nav>
+      <a href="{% url 'landingpage' %}">Home</a>
+      <a href="donate.html">About Us</a>
+      <a href="request.html">Contact</a>
+      <a href="{% url 'login'%}">Login</a>
+      <a href="{% url 'user_register'%}">Donor Register</a>
+    </nav>
+  </header>
+  {% block content %}
+  {% endblock %}
+    <footer>
+
+    <p>python developers</p>
+    <p>Varkala,Tvm</p>
+    <p><strong>Phone:</strong><span>+91 9876543210</span><br></p>
+    <strong>E-mail:</strong><span>nourishhope@gmail.com</span>
+    <p>&copy; 2025 NourishHope.All Rights Reserved</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootsrap@5.3.3.3/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
