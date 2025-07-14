@@ -5,39 +5,56 @@
 <head>
   <meta charset="UTF-8">
   <title>NourishHope | Home</title>
-  <link rel="stylesheet" href="{% static 'hope/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
 <body>
   <header>
-    <h1>NourishHope</h1>
-    <nav>
-      <a href="{% url 'ngos_home' %}">Home</a>
-      <a href="donate.html">About Us</a>
-      <a href="{% url 'all_donations' %}">view donations</a>
-      <a href="{% url 'logout' %}">logout</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NourishHope</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'ngos_home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'all_donations' %}">view donations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section class="hero">
+  <div class="containar text-center mt-0" style="background-image: url('/static/hope/assets/images/hero.jpg'); background-size: cover; background-position: center; padding: 120px; color: white;">
     <h2>Fight Hunger. Share Your Surplus.</h2>
-    <a href="{% url 'all_donations' %}" class="btn">view donations</a>
-  </section>
+    <a href="{% url 'all_donations' %}" class="btn btn-primary">view donations</a>
+  </div>
 
-  <section class="stats">
-    <div>🍲 <strong>10,000+</strong> Meals Donated</div>
-    <div>🚚 <strong>500+</strong> Volunteers</div>
-    <div>👨‍👩‍👧‍👦 <strong>200+</strong> Families Fed Weekly</div>
-  </section>
 
-  <footer>
-
-    <p>python developers</p>
-    <p>Varkala,Tvm</p>
-    <p><strong>Phone:</strong><span>+91 9876543210</span><br></p>
-    <strong>E-mail:</strong><span>nourishhope@gmail.com</span>
-    <p>&copy; 2025 NourishHope.All Rights Reserved</p>
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p class="mb-0">python developers</p>
+      <p class="mb-0">Varkala,Tvm</p>
+      <p class="mb-0"><strong>Phone:</strong><span>+91 9876543210</span><br></p>
+      <p class="mb-0"><strong>E-mail:</strong><span>nourishhope@gmail.com</span></p>
+      <p class="mb-0">&copy; 2025 NourishHope.All Rights Reserved</p>
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

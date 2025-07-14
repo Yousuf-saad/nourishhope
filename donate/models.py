@@ -14,7 +14,7 @@ class user(models.Model):
     login_id=models.OneToOneField(login,on_delete=models.CASCADE,null=True,blank=True)
 
 class donations(models.Model):
-    name=models.CharField(max_length=100)
+    food_name=models.CharField(max_length=100)
     quantity=models.IntegerField()
     donation_status=models.CharField(max_length=50,default='pending')
     login_id=models.ForeignKey(login,on_delete=models.CASCADE,null=True,blank=True)

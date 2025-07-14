@@ -16,4 +16,5 @@ urlpatterns=[
     path('admins/',views.admin_home,name='admins'),
     path('allusers/',views.admin_users,name='allusers'),
     path('alldonations/',views.admin_donations,name='alldonations'),
+    path('allrequests/',views.admin_requests,name='allrequests'),
 ]

@@ -126,3 +126,7 @@ def admin_users(request):
 def admin_donations(request):
     all_dons=donations.objects.all()
     return render(request,'all_donations_view.html',{'all_don':all_dons})
+
+def admin_requests(request):
+    all_req=requests.objects.all()
+    return render(request,'all_requests_view.html',{'all_reqs':all_req})

@@ -35,4 +35,8 @@ class log_edit_form(forms.ModelForm):
 class donation_form(forms.ModelForm):
     class Meta:
         model=donations
-        fields=['name','quantity']
+        fields=['food_name','quantity']
+        widget={
+            'food_name':forms.TextInput(attrs={'class':'form-control'}),
+            'quantity':forms.NumberInput(attrs={'class':'form-control'})
+        }

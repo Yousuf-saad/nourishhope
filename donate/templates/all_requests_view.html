@@ -15,16 +15,16 @@
         <table class="table table-bordered table-striped table-hover table-sm">
             <thead class="table-dark">
                 <tr>
-                    <th>Name</th>
-                    <th>Contact</th>
-                    <th>E-mail</th>
+                    <th>Food Name</th>
+                    <th>Quantity</th>
+                    <th>Request_status</th>
                 </tr>
             </thead>
-            {% for all_users in all_user %}
+            {% for all_req in all_reqs %}
             <tr>
-                <td>{{all_users.name}}</td>
-                <td>{{all_users.contact}}</td>
-                <td>{{all_users.login_id.email}}</td>
+                <td>{{all_req.donation_id.food_name}}</td>
+                <td>{{all_req.donation_id.quantity}}</td>
+                <td>{{all_req.request_status}}</td>
             </tr>
             {% endfor %}
         </table>
