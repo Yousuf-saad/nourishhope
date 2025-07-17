@@ -16,8 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.shortcuts import render
+
+def custom_404_view(request, exception):
+    return render(request,'404.html',status=404)
+def custom_500_view(request):
+    return render(request,'500.html',status=500)
+def custom_403_view(request, exception):
+    return render(request,'403.html',status=404)
+def custom_400_view(request, exception):
+    return render(request,'400.html',status=404)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('donate.urls'))
 ]
+
+handler404=custom_404_view
+handler500=custom_500_view
+handler403=custom_403_view
+handler400=custom_400_view
