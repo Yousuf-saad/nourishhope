@@ -5,11 +5,22 @@ class reg_form(forms.ModelForm):
     class Meta:
         model=user
         fields=['name','contact','address','location']
+        widgets={
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+            'contact':forms.TextInput(attrs={'class':'form-control'}),
+            'address':forms.TextInput(attrs={'class':'form-control'}),
+            'location':forms.TextInput(attrs={'class':'form-control'}),
+        }
 
 class log_form(forms.ModelForm):
     class Meta:
         model=login
         fields=['email','password']
+        widgets={
+            'email':forms.TextInput(attrs={'class':'form-control'}),
+            'password':forms.PasswordInput(attrs={'class':'form-control'}),
+
+        }
 
 class login_verify(forms.Form):
     email=forms.CharField(max_length=100)
